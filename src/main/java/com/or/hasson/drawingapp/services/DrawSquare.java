@@ -1,6 +1,8 @@
 package com.or.hasson.drawingapp.services;
 
 import com.google.inject.Inject;
+import com.or.hasson.drawingapp.annotations.ColorValue;
+import com.or.hasson.drawingapp.annotations.EdgeValue;
 
 public class DrawSquare implements DrawShape {
 
@@ -8,7 +10,7 @@ public class DrawSquare implements DrawShape {
     private Integer edge;
 
     @Inject
-    public DrawSquare(String color, Integer edge){
+    public DrawSquare(@ColorValue String color, @EdgeValue Integer edge){
         super();
         this.color = color;
         this.edge = edge;
