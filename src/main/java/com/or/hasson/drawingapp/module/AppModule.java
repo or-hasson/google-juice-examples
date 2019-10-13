@@ -8,7 +8,8 @@ public class AppModule extends AbstractModule {
 
     @Override
     protected void configure(){
-
         bind(DrawShape.class).to(DrawSquare.class);
+        bind(String.class).toInstance("Red");
+        bind(Integer.class).toInstance(70);
     }
 }
