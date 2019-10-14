@@ -33,7 +33,7 @@ public class SquareRequest {
     }
 
 
-/*Another Way to inject the DrawShape to DrawSquare
+/*Another Way to inject the DrawShape to DrawSquareWithProvider
     @Inject
     public void setDrawShape(DrawShape d){
         this.d = d;

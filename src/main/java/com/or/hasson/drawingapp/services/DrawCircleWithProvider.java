@@ -5,14 +5,14 @@ import com.or.hasson.drawingapp.annotations.ColorValue;
 import com.or.hasson.drawingapp.annotations.EdgeValue;
 import com.or.hasson.drawingapp.annotations.RadiusValue;
 
-public class DrawCircle implements DrawShape {
+public class DrawCircleWithProvider implements DrawShape {
 
     private String color;
     private Integer radius;
 
     /* * With annotations
     @Inject
-    public DrawCircle(@ColorValue String color, @RadiusValue Integer radius){
+    public DrawCircleWithProvider(@ColorValue String color, @RadiusValue Integer radius){
         super();
         this.color = color;
         this.radius = radius;
@@ -21,7 +21,7 @@ public class DrawCircle implements DrawShape {
 
     //With Providers
     @Inject
-    public DrawCircle(String color, Integer radius){
+    public DrawCircleWithProvider(String color, Integer radius){
         this.color = color;
         this.radius = radius;
     }
