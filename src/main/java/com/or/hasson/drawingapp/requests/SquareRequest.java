@@ -13,8 +13,14 @@ public class SquareRequest {
      */
     DrawShape d;
 
+    /* *with annotation
     @Inject
     public SquareRequest(@Named("Square") DrawShape d){
+        this.d = d;
+    } * */
+
+    @Inject
+    public SquareRequest(DrawShape d){
         this.d = d;
     }
 

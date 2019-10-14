@@ -34,7 +34,7 @@ public class Main {
 
     public static void main(String[] args){
         sendRequest(SQUARE_REQ);
-        sendRequest(CIRCLE_REQ);
+       // sendRequest(CIRCLE_REQ);
     }
 
 }

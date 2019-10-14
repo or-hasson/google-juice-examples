@@ -10,19 +10,28 @@ public class CircleRequest {
     @Inject
     Drawshape d;
      */
-    DrawShape d;
 
+    DrawShape circle;
+
+    /* * Inject with Annotations
     @Inject
-    public CircleRequest(@Named("Circle") DrawShape d){
-        this.d = d;
+    public CircleRequest(@Named("Circle") DrawShape circle){
+        this.circle = circle;
+    }
+    */
+
+    //Inject with Providers
+    @Inject
+    public CircleRequest(DrawShape circle){
+        this.circle = circle;
     }
 
     public void makeRequest(){
-        d.draw();
+        circle.draw();
     }
 
     public DrawShape getDrawShape(){
-        return d;
+        return circle;
     }
 
 
