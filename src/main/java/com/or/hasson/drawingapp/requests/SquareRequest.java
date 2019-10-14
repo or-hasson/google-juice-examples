@@ -4,6 +4,10 @@ import com.google.inject.Inject;
 import com.or.hasson.drawingapp.services.DrawShape;
 
 public class SquareRequest {
+    /*Another way to Inject can Inject by
+    @Inject
+    Drawshape d;
+     */
     DrawShape d;
 
     @Inject
@@ -18,4 +22,12 @@ public class SquareRequest {
     public DrawShape getDrawShape(){
         return d;
     }
+
+
+/*Another Way to inject the DrawShape to DrawSquare
+    @Inject
+    public void setDrawShape(DrawShape d){
+        this.d = d;
+    }
+    */
 }

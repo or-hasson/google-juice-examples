@@ -17,6 +17,6 @@ public class AppModule extends AbstractModule {
         bind(Integer.class).annotatedWith(EdgeValue.class).toInstance(75);
 
         //Make only one Instance Of SquareResuest using Design Patter(SINGLETON)
-        bind(SquareRequest.class).in(Scopes.SINGLETON);
+        //bind(SquareRequest.class).in(Scopes.SINGLETON);
     }
 }

@@ -16,9 +16,12 @@ public class Main {
             SquareRequest request =  injector.getInstance(SquareRequest.class);
             request.makeRequest();
 
+            /*SINGELTON TEST
             SquareRequest requestSecond =  injector.getInstance(SquareRequest.class);
             boolean areDrawShapeEqual = request.getDrawShape() == requestSecond.getDrawShape();
             System.out.println(areDrawShapeEqual);
+             **/
+
         }
     }
 
