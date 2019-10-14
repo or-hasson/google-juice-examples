@@ -15,6 +15,10 @@ public class Main {
             Injector injector = Guice.createInjector(new AppModule());
             SquareRequest request =  injector.getInstance(SquareRequest.class);
             request.makeRequest();
+
+            SquareRequest requestSecond =  injector.getInstance(SquareRequest.class);
+            boolean areDrawShapeEqual = request.getDrawShape() == requestSecond.getDrawShape();
+            System.out.println(areDrawShapeEqual);
         }
     }
 
