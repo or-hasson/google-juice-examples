@@ -7,17 +7,9 @@ import com.or.hasson.drawingapp.services.DrawShape;
 
 
 public class SquareRequest {
-    /*Another way to Inject can Inject by
-    @Inject
-    Drawshape d;
-     */
+
     DrawShape d;
 
-    /* *with annotation
-    @Inject
-    public SquareRequest(@Named("Square") DrawShape d){
-        this.d = d;
-    } * */
 
     @Inject
     public SquareRequest(DrawShape d){
@@ -28,15 +20,5 @@ public class SquareRequest {
         d.draw();
     }
 
-    public DrawShape getDrawShape(){
-        return d;
-    }
 
-
-/*Another Way to inject the DrawShape to DrawSquareWithProvider
-    @Inject
-    public void setDrawShape(DrawShape d){
-        this.d = d;
-    }
-    */
 }

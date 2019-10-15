@@ -2,28 +2,26 @@ package com.or.hasson.drawingapp.main;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.or.hasson.drawingapp.module.AppModuleProvider;
 import com.or.hasson.drawingapp.module.AppModuleToProvider;
 import com.or.hasson.drawingapp.requests.SquareRequest;
 
 
-public class MainAppModuleProvider {
+public class MainAppModuleWithToProviderClass {
 
-    private static final String SQUARE_REQ = "SQUARE";
+    private static final String SQAURE_REQ = "SQUARE";
+    private static final String CIRCLE_REQ = "CIRCLE";
 
-    private static void sendRequest(String shape){
-        if(shape.equals(SQUARE_REQ)){
+    private static void sendRequest(String sqaureReq) {
+
+        if(sqaureReq.equals(SQAURE_REQ)){
             Injector injector = Guice.createInjector(new AppModuleToProvider());
             SquareRequest request = injector.getInstance(SquareRequest.class);
             request.makeRequest();
         }
 
-
     }
 
-    public static void main(String[] args){
-        sendRequest(SQUARE_REQ);
-
+    public static void main(String[] args) {
+        sendRequest(SQAURE_REQ);
     }
-
 }
