@@ -3,6 +3,7 @@ package com.or.hasson.drawingapp.main;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.or.hasson.drawingapp.module.AppModuleToProvider;
+import com.or.hasson.drawingapp.requests.CircleRequest;
 import com.or.hasson.drawingapp.requests.SquareRequest;
 
 
@@ -19,9 +20,16 @@ public class MainAppModuleWithToProviderClass {
             request.makeRequest();
         }
 
+        if(sqaureReq.equals(CIRCLE_REQ)){
+            Injector injector = Guice.createInjector(new AppModuleToProvider());
+            CircleRequest request = injector.getInstance(CircleRequest.class);
+            request.makeRequest();
+        }
+
     }
 
     public static void main(String[] args) {
         sendRequest(SQAURE_REQ);
+        sendRequest(CIRCLE_REQ);
     }
 }

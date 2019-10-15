@@ -12,7 +12,7 @@ public class SquareRequest {
 
 
     @Inject
-    public SquareRequest(DrawShape d){
+    public SquareRequest(@Square DrawShape d){
         this.d = d;
     }
 
