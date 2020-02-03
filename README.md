@@ -1,4 +1,4 @@
-# guice-hasson
+# Google Juice Examples
 examples of dependencies injection with Google Guice 4.2.2
 
 Guice is an open source, Java-based dependency injection framework. It is quiet lightweight and is actively developed/managed by Google. 
